@@ -10,6 +10,10 @@ const routes: Routes = [
   {
     path:'stock',
     loadChildren: () => import('../mecanicien/mecanicien.module').then(m => m.MecanicienModule)
+  },
+  {
+    path:'tache',
+    loadChildren: () => import('../mecanicien/mecanicien.module').then(m => m.MecanicienModule)
   }
 
 ];

@@ -13,11 +13,11 @@ export class AcceuilComponent implements OnInit {
   ngOnInit() {
   }
   gestionStockMeca(){
-    this.router.navigate(['/stock']); 
+    this.router.navigate(['stock']); 
   }
-  // ficheDeTravail(){
-  //   this.router.navigate(['/acceuil','fiche']);
-  // }
+  ficheDeTravail(){
+    this.router.navigate(['tache']);
+  }
   // gestionStockVoiture(){
   //   this.router.navigate(['/acceuil','stock-voiture'])
   // }
