@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AcceuilComponent } from './acceuil/acceuil.component';
+
 import { LoginComponent } from './login/login.component';
 import { CoreRoutingModule } from './core-routing.module';
+import { AcceuilComponent } from './acceuil/acceuil.component';
 
 
 
 
 @NgModule({
-  declarations: [AcceuilComponent, LoginComponent],
-  exports:[LoginComponent,AcceuilComponent],
+  declarations: [LoginComponent,AcceuilComponent],
+  exports:[LoginComponent],
   imports: [
     CommonModule,
     CoreRoutingModule

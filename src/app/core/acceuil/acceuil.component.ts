@@ -13,19 +13,19 @@ export class AcceuilComponent implements OnInit {
   ngOnInit() {
   }
   gestionStockMeca(){
-    this.router.navigate(['stock']); 
+    this.router.navigate(['/meca/stock']); 
   }
   ficheDeTravail(){
-    this.router.navigate(['tache']);
+    this.router.navigate(['/meca/tache']);
   }
-  // gestionStockVoiture(){
-  //   this.router.navigate(['/acceuil','stock-voiture'])
-  // }
-  // gestionDevis(){
-  //   this.router.navigate(['/acceuil','devis'])
-  // }
-  // gestionClient(){
-  //   this.router.navigate(['/acceuil','client'])
-  // }
+  gestionStockVoiture(){
+    this.router.navigate(['/comm/stockV'])
+  }
+  gestionDevis(){
+    this.router.navigate(['/comm/devis'])
+  }
+  gestionClient(){
+    this.router.navigate(['/comm/client'])
+  }
 
 }

@@ -12,8 +12,11 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
   }
-  onSubmit(){
-    this.router.navigate(['/acceuil']);
+  onSubmitMeca(){
+    this.router.navigate(['/meca']);
+  }
+  onSubmitComm(){
+    this.router.navigate(['/comm']);
   }
 
 }

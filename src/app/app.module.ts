@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
 
 import { CoreModule } from './core/core.module';
 
+
 @NgModule({
   declarations: [
     AppComponent
+
   ],
   imports: [
     BrowserModule,

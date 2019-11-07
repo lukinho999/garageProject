@@ -13,7 +13,7 @@ export class StockComponent implements OnInit {
   ngOnInit() {
   }
   displayDetails(){
-    this.router.navigate(['/stock','stock-detail']);
+    this.router.navigate(['/meca/stockdet']);
   }
 
 }
