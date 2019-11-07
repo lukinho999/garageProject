@@ -1,0 +1,17 @@
+.voit{
+    background-color: #3d6171;
+    border-color: #3d6171;
+    font-size: 2rem;
+}
+.divVoit{
+    text-align: center;
+    margin: 5%;
+}
+.search{
+    width: 50%;
+    margin-left: 27%;
+    margin-bottom: 2%;
+}
+.add{
+    margin: 2%;
+}

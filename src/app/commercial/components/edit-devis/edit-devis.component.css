@@ -1,0 +1,35 @@
+.dev{
+    background-color: #3d6171;
+    border-color: #3d6171;
+    font-size: 2rem;
+}
+.divDev{
+    text-align: center;
+    margin: 5%;
+}
+.radioButton{
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-around;
+}
+.confirme{
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    font-size: 1.5rem;
+}
+.annule{
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    font-size: 1.5rem;
+    color: white;;
+}
+.total{
+    font-size: 1.5rem;
+    color: red;
+}
+.boutons{
+    float: right;
+}
+form{
+    margin-bottom: 6%;
+}

@@ -1,0 +1,10 @@
+.btn-lg{
+background-color: #3d6171;
+margin: 3%;
+width: 20%;
+}
+.meca, .comm{
+    text-align: center;
+    padding-top: 10%;
+    padding-bottom: 5%;
+}

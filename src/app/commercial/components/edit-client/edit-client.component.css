@@ -1,0 +1,22 @@
+.voit{
+    background-color: #3d6171;
+    border-color: #3d6171;
+    font-size: 2rem;
+}
+.divVoit{
+    text-align: center;
+    margin: 5%;
+}
+.confirme{
+    background-color: #5cb85c;
+    border-color: #5cb85c;
+    font-size: 1.5rem;
+}
+.annule{
+    background-color: #f0ad4e;
+    border-color: #f0ad4e;
+    font-size: 1.5rem;
+}
+.boutons{
+    float: right;
+}

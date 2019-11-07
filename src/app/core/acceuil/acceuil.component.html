@@ -1,9 +1,21 @@
-<h1>Bonjour Mecanicien</h1>
-<button type="button" class="btn btn-primary btn-lg" (click)="gestionStockMeca()">Stock pièces</button>
-<button type="button" class="btn btn-secondary btn-lg" (click)="ficheDeTravail()">Consultation tâches</button>
+<div class="meca">
+<button type="button" class="btn btn-primary btn-lg" (click)="gestionStockMeca()">Stock pièces <br>
+<i class="fas fa-briefcase"></i>
+</button>
+<button type="button" class="btn btn-secondary btn-lg" (click)="ficheDeTravail()">Consultation tâches <br>
+    <i class="fas fa-tasks"></i>
 
+</button>
+</div>
 
-<h1>Bonjour Commercial</h1>
-<button type="button" class="btn btn-primary btn-lg" (click)="gestionStockVoiture()">Stock Voitures</button>
-<button type="button" class="btn btn-secondary btn-lg" (click)="gestionDevis()">Devis</button>
-<button type="button" class="btn btn-secondary btn-lg" (click)="gestionClient()">Clients</button>
+<div class="comm">
+<button type="button" class="btn btn-primary btn-lg" (click)="gestionStockVoiture()">Stock Voitures <br>
+        <i class="fas fa-car"></i>
+</button>
+<button type="button" class="btn btn-secondary btn-lg" (click)="gestionDevis()">Devis <br>
+        <i class="fas fa-file-invoice"></i>
+</button>
+<button type="button" class="btn btn-secondary btn-lg" (click)="gestionClient()">Clients<br>
+        <i class="fas fa-user"></i>
+</button>
+</div>

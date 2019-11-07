@@ -1,6 +1,9 @@
-<h1>Création de devis</h1>
+<div class="divDev">
+    <button type="button" class="btn btn-danger dev">Modifier devis</button>
+    </div>
 
-<form>
+<form class="container">
+  <div class="radioButton">
         <div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
                 <label class="form-check-label" for="exampleRadios1">
@@ -13,6 +16,7 @@
                   Refuser devis
                 </label>
         </div>
+      </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Numéro devis</label>
       <input class="form-control" type="text" placeholder="Default input">
@@ -39,10 +43,10 @@
         <label for="exampleFormControlInput1">Client</label>
         <input class="form-control" type="text" placeholder="Default input">
       </div>
-      
-      <button type="button" class="btn btn-danger">Total</button>
-      <button type="button" class="btn btn-success">Envoyer</button>
-      <button type="button" class="btn btn-warning">Annuler</button>
-    
+      <span class="total">Total : 690.25€</span>
+      <div class="boutons">
+      <button type="button" class="btn btn-success confirme">Envoyer</button>
+      <button type="button" class="btn btn-warning annule">Annuler</button>
+    </div>
   </form>
 

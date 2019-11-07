@@ -1,0 +1,23 @@
+.logoPrinc{
+    width: 16%;
+}
+.btnRight{
+    display: flex;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    /* float: right; */
+    justify-content: flex-end;
+    width: 16%;
+    float: right;
+}
+.a{
+    background-color: #a1c4fd;
+    border-color: #cccccc;
+}
+.b{
+    background-color: #d9534f;
+}
+.c{
+    background-color: #3d6171;
+    border-color: #3d6171;
+}
