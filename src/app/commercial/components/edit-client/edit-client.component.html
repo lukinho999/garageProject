@@ -1,18 +1,22 @@
 <div class="divVoit">
-    <button type="button" class="btn btn-danger voit">Mofifier client</button>
+    <button type="button" class="btn btn-danger voit">Modifier client</button>
     </div>
 
     <form class="container">
     <div class="form-row ">
       <div class="form-group col-md-6">
-          <label for="inputName">Nom</label>
-        <input type="text" class="form-control" placeholder="De la frite">
+          <div>
+              <input type="hidden" name="id">
+            </div>
+          <label for="nom" *ngFor="let cl of listeclients |async">{{cl.id}}</label>
+        <input type="text" class="form-control" name="nom" value="cl.nom" >
       </div>
       <div class="form-group col-md-6">
-            <label for="inputFirstName">Prenom</label>
-        <input type="text" class="form-control" placeholder="Roger">
+            <label for="prenom">Prenom</label>
+        <input type="text" class="form-control" name="prenom" value="prenom">
       </div>
     </div>
+    <!--  
     <div class="form-group">
       <label for="inputAddress">Adresse</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="44 avenue du cheeseburger">
@@ -27,12 +31,14 @@
         <input type="text" class="form-control" id="inputZip" placeholder="13011">
       </div>
     </div>
+    -->
     <div class="boutons">
-        <button type="submit" class="btn btn-primary confirme">Confirmer
+        <button type="button" class="btn btn-primary confirme" (click)="doModifier()">Confirmer
             <i class="fas fa-check-double"></i>
         </button>
-        <button type="submit" class="btn btn-primary annule">Annuler
+        <button type="button" class="btn btn-primary annule">Annuler
             <i class="fas fa-user-minus"></i>
         </button>
+        
       </div>
   </form>

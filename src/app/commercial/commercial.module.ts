@@ -10,7 +10,7 @@ import { AddClientComponent } from './components/add-client/add-client.component
 import { DevisComponent } from './components/devis/devis.component';
 import { AddDevisComponent } from './components/add-devis/add-devis.component';
 import { EditDevisComponent } from './components/edit-devis/edit-devis.component';
-
+import { FormsModule} from '@angular/forms';
 
 
 
@@ -19,7 +19,8 @@ import { EditDevisComponent } from './components/edit-devis/edit-devis.component
   imports: [
     CommonModule,
     CommercialRoutingModule,
-    CoreModule
+    CoreModule,
+    FormsModule
   ]
 })
 export class CommercialModule { }

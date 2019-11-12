@@ -1,0 +1,36 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "client": [
+    {
+      "id": 9,
+      "nom": "NCreation",
+      "prenom": "PCreation"
+    },
+    {
+      "id": 17,
+      "nom": "SERGENT",
+      "prenom": "Luc"
+    },
+    {
+      "id": 18,
+      "nom": "lol",
+      "prenom": "hh"
+    }
+  ]
+}

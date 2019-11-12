@@ -4,9 +4,10 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CoreModule } from './core/core.module';
+import { ServiceGenService } from './core/services/service-gen.service';
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { CoreModule } from './core/core.module';
     AppRoutingModule,
     CoreModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ServiceGenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
