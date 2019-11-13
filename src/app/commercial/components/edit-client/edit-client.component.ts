@@ -1,8 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ServiceGenService } from 'src/app/core/services/service-gen.service';
 import { Client } from 'src/app/core/models/client';
-import { Router } from '@angular/router';
+import { Router,  ActivatedRouteSnapshot, ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
+import {  map } from 'rxjs/operators';
+import { ClientComponent } from '../client/client.component';
 
 const url="http://localhost:3000/client";
 
@@ -14,34 +16,65 @@ const url="http://localhost:3000/client";
 export class EditClientComponent implements OnInit {
 
   
-  listeclients:Observable<Client[]>;
+  client : Client;
   public nom :string;
   public prenom :string;
+  public adresse:string;
+	public codePostal:string;
+	public ville:string;
+	public telephone:string;
+	public mobile:string;
 
-  constructor(private servicegen:ServiceGenService<Client>, private router:Router) {
+  constructor(private servicegen:ServiceGenService<Client>, private router:Router,private route:ActivatedRoute) {
     // this.nom=this.listeclients[this.nom];
+    this.client ={
+      id:0,
+      nom:"",
+      prenom:"",
+      adresse:"",
+      codePostal:"",
+      ville:"",
+      telephone:"",
+      mobile:"",
+      employe:null
+      };
+      this.route.params.subscribe((param: {id:number}) => 
+      this.servicegen.getall(url).pipe(
+        map((data)=>data.filter((item)=>param.id == item.id))).subscribe((data)=>
+        {
+          this.client = data[0];
+        console.log(this.client);
+        }));
+    
 
    }
 
   
   refresh(){
-    this.listeclients = this.servicegen.getall(url);
+   // this.listeclients = this.servicegen.getall(url);
   }
 
   ngOnInit() {
-    this.refresh();
+   // this.refresh();
   }
   doModifier(){
     let cl : Client = {
-    id:0,
-    nom:this.nom,
-    prenom:this.prenom
+    id:this.client.id,
+    nom:this.client.nom,
+    prenom:this.client.prenom,
+    adresse:this.adresse,
+	  codePostal:this.codePostal,
+	  ville:this.ville,
+	  telephone:this.telephone,
+    mobile:this.mobile,
+    employe:null
     };
     this.servicegen.put(url,cl.id, cl).subscribe(
-      ()=> this.refresh()
+      ()=> this.router.navigate(['/comm/client'])
     );
-    this.router.navigate(['/comm/client'])
+    
   }
   
 
 }
+

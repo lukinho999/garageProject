@@ -28,9 +28,42 @@
       "prenom": "Luc"
     },
     {
-      "id": 18,
-      "nom": "lol",
-      "prenom": "hh"
+      "id": 19,
+      "nom": "Fare",
+      "prenom": "Faress"
+    }
+  ],
+  "voiture": [
+    {
+      "id": 1,
+      "marque": "Toyota",
+      "modele": "0225F",
+      "annee": 2004,
+      "quantite": 5
+    },
+    {
+      "id": 2,
+      "marque": "Toyota",
+      "modele": "0225F",
+      "annee": 2001,
+      "quantite": 1
+    }
+  ],
+  "devis": [
+    {
+      "id": 1,
+      "numerodevis": "85005fuui",
+      "client": "Mr durand",
+      "reference": "0225F"
+    },
+    {
+      "id": 2,
+      "numerodevis": "85005fuuk"
+    },
+    {
+      "id": 3,
+      "numerodevis": "85005fuuhhh",
+      "client": "luco"
     }
   ]
 }

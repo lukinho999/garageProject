@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 
 
-const url="http://localhost:3000/client";
+const url="http://localhost:8080/rest/Clients";
 
 @Component({
   selector: 'grg-add-client',
@@ -18,6 +18,11 @@ export class AddClientComponent implements OnInit {
   */
   public nom :string;
   public prenom :string;
+  public adresse:string;
+	public codePostal:string;
+	public ville:string;
+	public telephone:string;
+	public mobile:string;
   listeclients:Observable<Client[]>;
   constructor(private servicegen:ServiceGenService<Client>, private router:Router) { }
 
@@ -31,12 +36,25 @@ export class AddClientComponent implements OnInit {
     let cl : Client = {
     id:0,
     nom:this.nom,
-    prenom:this.prenom
+    prenom:this.prenom,
+    adresse:this.adresse,
+	  codePostal:this.codePostal,
+	  ville:this.ville,
+	  telephone:this.telephone,
+    mobile:this.mobile,
+    employe: {
+      civilite:"Mr",
+      id:1,
+      motDePasse:"",
+      numeroEmploye:"",
+      nom:"",
+      prenom:""
+    }
     };
     this.servicegen.post(url,cl).subscribe(
-      ()=> this.refresh()
+      ()=> this.router.navigate(['/comm/client'])
     );
-    this.router.navigate(['/comm/client'])
+    
   }
 
 

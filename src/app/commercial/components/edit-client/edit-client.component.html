@@ -3,42 +3,40 @@
     </div>
 
     <form class="container">
-    <div class="form-row ">
-      <div class="form-group col-md-6">
-          <div>
-              <input type="hidden" name="id">
+        <div class="form-row ">
+            <div class="form-group col-md-6">
+             
+                <label for="nom" >Nom</label>
+                <input type="text" class="form-control" name="nom" [(ngModel)]="client.nom">
             </div>
-          <label for="nom" *ngFor="let cl of listeclients |async">{{cl.id}}</label>
-        <input type="text" class="form-control" name="nom" value="cl.nom" >
-      </div>
-      <div class="form-group col-md-6">
-            <label for="prenom">Prenom</label>
-        <input type="text" class="form-control" name="prenom" value="prenom">
-      </div>
-    </div>
-    <!--  
-    <div class="form-group">
-      <label for="inputAddress">Adresse</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="44 avenue du cheeseburger">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">Ville</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="Marseille">
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Code postal</label>
-        <input type="text" class="form-control" id="inputZip" placeholder="13011">
-      </div>
-    </div>
-    -->
-    <div class="boutons">
-        <button type="button" class="btn btn-primary confirme" (click)="doModifier()">Confirmer
-            <i class="fas fa-check-double"></i>
-        </button>
-        <button type="button" class="btn btn-primary annule">Annuler
-            <i class="fas fa-user-minus"></i>
-        </button>
-        
-      </div>
-  </form>
+            <div class="form-group col-md-6">
+                <label for="prenom">Prenom</label>
+            <input type="text" class="form-control" name="prenom" [(ngModel)]="client.prenom">
+          </div>
+        </div>
+        <!--  
+        <div class="form-group">
+          <label for="inputAddress">Adresse</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="44 avenue du cheeseburger">
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">Ville</label>
+            <input type="text" class="form-control" id="inputCity" placeholder="Marseille">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Code postal</label>
+            <input type="text" class="form-control" id="inputZip" placeholder="13011">
+          </div>
+        </div>
+        -->
+        <div class="boutons">
+            <button type="button" class="btn btn-primary confirme" (click)="doModifier()">Confirmer
+                <i class="fas fa-check-double"></i>
+            </button>
+            <button type="button" class="btn btn-primary annule">Annuler
+                <i class="fas fa-user-minus"></i>
+            </button>
+            
+          </div>
+      </form>

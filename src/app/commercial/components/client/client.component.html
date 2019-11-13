@@ -6,30 +6,26 @@
 <table class="table">
     <thead class="thead-light">
       <tr>
-        <th scope="col">Devis</th>
         <th scope="col">Nom</th>
         <th scope="col">Prenom</th>
         <th scope="col">Adresse</th>
         <th scope="col">Ville</th>
         <th scope="col">Code postal</th>
         <th scope="col">Téléphone</th>
-        <th scope="col">Créateur fiche</th>
-        <th scope="col">Facture</th>
+
         <th scope="col">Actions</th>
         <th scope="col">Supprimer</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let cl of listeclients |async">
-        <th scope="row">D-100</th>
         <td>{{cl.nom}}</td>
         <td>{{cl.prenom}}</td>
-        <td>84 avenue de le meringue</td>
-        <td>Meringue City</td>
-        <td>69069</td>
-        <td>0689596325</td>
-        <td>Joseph Le Chef</td>
-        <td>F12</td>
+        <td>{{cl.adresse}}</td>
+        <td>{{cl.ville}}</td>
+        <td>{{cl.codePostal}}</td>
+        <td>{{cl.mobile}}</td>
+
         <td>
             <button type="button" class="btn btn-light" 
             (click)="displayDetails(cl.id)">Afficher détail

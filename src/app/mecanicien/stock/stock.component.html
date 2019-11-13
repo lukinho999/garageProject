@@ -6,18 +6,20 @@
           <thead class="thead-light">
             <tr>
               <th scope="col">Reference</th>
-              <th scope="col">Nom</th>
-              <th scope="col">Stock</th>
+              <th scope="col">quantite</th>
+              <th scope="col">Prix unitaire HT</th>
+              <th scope="col">Description</th>
               <th scope="col">Action</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th scope="row">D-100</th>
-              <td>Boulon</td>
+            <tr *ngFor="let p of listepieces |async">
+              <th scope="row">{{p.reference}}</th>
               <td>
-                  <span class="badge badge-success badge-pill">En stock(5)</span>
+                  <span class="badge badge-success badge-pill">stock : ({{p.quantite}})</span>
               </td>
+              <td>{{p.prixUnitaireHt}}</td>
+              <td>{{p.description}}</td>
 
               <td> <button type="button" class="btn btn-light" (click)="displayDetails()">Afficher détail
                   <i class="fas fa-edit"></i></button>

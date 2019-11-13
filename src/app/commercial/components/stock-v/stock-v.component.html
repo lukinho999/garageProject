@@ -6,6 +6,7 @@
 <table class="table">
     <thead class="thead-light">
       <tr>
+          <th scope="col">Référence</th>
         <th scope="col">Marque</th>
         <th scope="col">Modèle</th>
         <th scope="col">Année</th>
@@ -13,13 +14,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Renault</td>
-        <td>Megane</td>
-        <td>2006</td>
-        <td><span class="badge badge-success badge-pill">En stock(15)</span></td>
+      <tr *ngFor="let v of listevoitures |async">
+          <td>{{v.reference}}</td>
+        <td>{{v.marque}}</td>
+        <td>{{v.modele}}</td>
+        <td>{{v.annee}}</td>
+        <td><span class="badge badge-success badge-pill">stock : ({{v.quantite}})</span></td>
       </tr>
-      <tr>
+      <!-- <tr>
         <td>Renault</td>
         <td>Megane</td>
         <td>2017</td>
@@ -36,7 +38,7 @@
         <td>3008</td>
         <td>2017</td>
         <td><span class="badge badge-success badge-pill">En stock(15)</span></td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>
   

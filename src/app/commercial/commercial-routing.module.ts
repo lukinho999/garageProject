@@ -33,7 +33,7 @@ const routes: Routes = [
     path:'addDevis', component: AddDevisComponent
   },
   {
-    path:'editDevis', component: EditDevisComponent
+    path:'editDevis/:id', component: EditDevisComponent
   }
 ];
 

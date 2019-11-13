@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
 import { CoreRoutingModule } from './core-routing.module';
 import { AcceuilComponent } from './acceuil/acceuil.component';
-import { ClientcrudComponent } from './components/clientcrud/clientcrud.component';
+
 
 
 

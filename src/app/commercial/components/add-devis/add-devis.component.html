@@ -4,8 +4,8 @@
 
 <form class="container">
     <div class="form-group">
-      <label for="exampleFormControlInput1">Numéro devis</label>
-      <input class="form-control" type="text" placeholder="Default input">
+      <label for="numerodevis">Numéro devis</label>
+      <input class="form-control" type="text" placeholder="Numero devis" name="numerodevis" [(ngModel)]="numerodevis">
     </div>
     <div class="form-group">
         <label for="exampleFormControlInput1">date de création devis
@@ -29,12 +29,12 @@
         <input class="form-control" type="text" placeholder="Default input">
       </div>
       <div class="form-group">
-        <label for="exampleFormControlInput1">Client</label>
-        <input class="form-control" type="text" placeholder="Default input">
+        <label for="client">Client</label>
+        <input class="form-control" type="text" placeholder="Client" name="client" [(ngModel)]="client">
       </div>
       <span class="total">Total : 690.25€</span>
       <div class="boutons">
-      <button type="button" class="btn btn-success confirme">Envoyer</button>
+      <button type="button" class="btn btn-success confirme" (click)="doCreer()">Envoyer</button>
       <button type="button" class="btn btn-warning annule">Annuler</button>
     </div>
   </form>

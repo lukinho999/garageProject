@@ -6,22 +6,24 @@
 <table class="table">
     <thead>
       <tr>
+        <th scope="col">Date création</th>
+        <th scope="col">Quantité</th>
         <th scope="col">Numero devis</th>
-        <th scope="col">Référence voiture</th>
         <th scope="col">Client</th>
         <th scope="col">Actions</th>
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <th scope="row">18h654</th>
-        <td>bhdjhdfg</td>
-        <td>Otto</td>
+      <tr *ngFor="let d of listedevis |async">
+        <th scope="row">{{d.dateCreation}}</th>
+        <td>{{d.quantite}}</td>
+        <td>{{d.employe}}</td>
+        <td>{{d.client.nom}}</td>
         <td><button type="button" class="btn btn-light" 
-            (click)="displayDetails()">Afficher détail
+            (click)="displayDetails(d.id)">Afficher détail
             <i class="fas fa-edit"></i></button></td>
       </tr>
-      <tr>
+      <!-- <tr>
         <th scope="row">2</th>
         <td>Jacob</td>
         <td>Thornton</td>
@@ -36,6 +38,6 @@
         <td><button type="button" class="btn btn-light" 
           (click)="displayDetails()">Afficher détail
           <i class="fas fa-edit"></i></button></td>
-      </tr>
+      </tr> -->
     </tbody>
   </table>

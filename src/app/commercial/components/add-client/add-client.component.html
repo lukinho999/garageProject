@@ -17,22 +17,26 @@
         <input type="text" class="form-control" placeholder="Prenom" name="prenom" [(ngModel)]="prenom">
       </div>
     </div>
-    <!--
+    
     <div class="form-group">
-      <label for="inputAddress">Adresse</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="44 avenue du cheeseburger">
+      <label for="adresse">Adresse</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="44 avenue du cheeseburger" name="adresse" [(ngModel)]="adresse">
     </div>
     <div class="form-row">
       <div class="form-group col-md-6">
-        <label for="inputCity">Ville</label>
-        <input type="text" class="form-control" id="inputCity" placeholder="Marseille">
+        <label for="ville">Ville</label>
+        <input type="text" class="form-control" id="inputCity" placeholder="Marseille" name="ville" [(ngModel)]="ville">
       </div>
       <div class="form-group col-md-2">
-        <label for="inputZip">Code postal</label>
-        <input type="text" class="form-control" id="inputZip" placeholder="13011">
+        <label for="codePostal">Code postal</label>
+        <input type="text" class="form-control" id="inputZip" placeholder="13011" name="codePostal" [(ngModel)]="codePostal">
+      </div>
+      <div class="form-group">
+        <label for="telephone">Numero de telephone</label>
+        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" name="telephone" [(ngModel)]="telephone">
       </div>
     </div>
-  -->
+ 
     <div class="boutons">
     <button type="button" class="btn btn-primary confirme" (click)="doCreer()">Confirmer
         <i class="fas fa-check-double"></i>

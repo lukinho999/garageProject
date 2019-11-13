@@ -4,7 +4,7 @@ import { ServiceGenService } from 'src/app/core/services/service-gen.service';
 import { Client } from 'src/app/core/models/client';
 import { Observable } from 'rxjs';
 
-const url="http://localhost:3000/client";
+const url="http://localhost:8080/rest/Clients";
 
 @Component({
   selector: 'grg-client',
