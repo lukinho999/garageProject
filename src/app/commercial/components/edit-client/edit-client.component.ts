@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 import {  map } from 'rxjs/operators';
 import { ClientComponent } from '../client/client.component';
 
-const url="http://localhost:3000/client";
+const url="http://localhost:8080/rest/Clients";
 
 @Component({
   selector: 'grg-edit-client',
@@ -36,7 +36,14 @@ export class EditClientComponent implements OnInit {
       ville:"",
       telephone:"",
       mobile:"",
-      employe:null
+      employe: {
+        civilite:"Mr",
+        id:1,
+        motDePasse:"",
+        numeroEmploye:"",
+        nom:"",
+        prenom:""
+      }
       };
       this.route.params.subscribe((param: {id:number}) => 
       this.servicegen.getall(url).pipe(
@@ -62,12 +69,19 @@ export class EditClientComponent implements OnInit {
     id:this.client.id,
     nom:this.client.nom,
     prenom:this.client.prenom,
-    adresse:this.adresse,
-	  codePostal:this.codePostal,
-	  ville:this.ville,
-	  telephone:this.telephone,
-    mobile:this.mobile,
-    employe:null
+    adresse:this.client.adresse,
+	  codePostal:this.client.codePostal,
+	  ville:this.client.ville,
+	  telephone:this.client.telephone,
+    mobile:this.client.mobile,
+    employe: {
+      civilite:"Mr",
+      id:1,
+      motDePasse:"",
+      numeroEmploye:"",
+      nom:"",
+      prenom:""
+    }
     };
     this.servicegen.put(url,cl.id, cl).subscribe(
       ()=> this.router.navigate(['/comm/client'])
