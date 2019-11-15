@@ -7,8 +7,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(private router: Router) { }
 
   title = 'garageProjet';
+  goToAccueil(){
+    this.router.navigate(['/meca'])
+  }
+
 
 
 }
